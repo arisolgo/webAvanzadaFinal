@@ -1,1 +1,47 @@
-<p>home works!</p>
+
+
+<!-- Toolbar -->
+<div class="toolbar" role="banner">
+
+    <div class="spacer"></div>
+</div>
+
+<div class="content" role="main">
+
+  <!-- Highlight Card -->
+  <!-- Resources -->
+  <h2>Eventos</h2>
+  
+    
+      <div class="form-group">
+        <label>Titulo de evento</label>
+        <input [(ngModel)]="title" class="form-control" placeholder="Nombre de evento">
+      </div>
+  
+    
+
+  <div *ngFor="let event of events | filter:title ">
+    <div style="display: flex; justify-content: space-between;">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">{{event.title}}</h5>
+      </div>
+    </div>
+
+    <img [src]="event.url" alt="">
+  </div>
+
+
+</div>
+
+
+   
+   
+
+ 
+
+  
+  
+
+
+
